@@ -8,7 +8,8 @@
   "description": "Apprenticeship Scraping",
   "main": "scraping.js",
   "scripts": {
-    "server": "node scraping.js"
+    "server": "node scraping.js",
+    "start": "node scraping.js"
   },
   "author": "",
   "license": "ISC",
