@@ -1,4 +1,4 @@
-const cron = require('node-cron');
+// const cron = require('node-cron');
 const axios = require('axios');
 const cheerio = require('cheerio');
 require('dotenv').config({path: __dirname + '/.env'})
@@ -6,7 +6,7 @@ require('dotenv').config({path: __dirname + '/.env'})
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 let message;
-let task = cron.schedule('* */1 * * *', () => {
+
     getLinkDetails = async () => {
         console.log('first')
             let res = await axios.get('https://careers.linkedin.com/reach/howtoapply')
@@ -27,14 +27,7 @@ let task = cron.schedule('* */1 * * *', () => {
             console.log('done')
     }
     getLinkDetails()
-})
 
-task.start()
-//async await promise built inside cron scheduler
-//
-//
-//
-//
 
 
 
