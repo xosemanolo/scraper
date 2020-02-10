@@ -8,7 +8,7 @@
   "description": "Apprenticeship Scraping",
   "main": "scraping.js",
   "scripts": {
-    "start": "node scraping.js"
+    "start": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
