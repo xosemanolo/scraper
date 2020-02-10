@@ -6,7 +6,7 @@ require('dotenv').config({path: __dirname + '/.env'})
 const client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 let message;
-let task = cron.schedule('*/1 * * * *', () => {
+let task = cron.schedule('* */12 * * *', () => {
     getLinkDetails = async () => {
         console.log('first')
             let res = await axios.get('https://careers.linkedin.com/reach/howtoapply')
